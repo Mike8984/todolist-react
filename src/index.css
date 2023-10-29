@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 1220px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 20px 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.todos {
+  padding: 40px 0;
+}
+
+.todo-item {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.todo-item div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.todo-item button {
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 800;
+  color: red;
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #fff;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #fff;
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.add-todo input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  padding: 15px 0;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.add-todo button {
+  background-color: #03963c;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  max-width: 600px;
+  border-radius: 5px;
+  background-color: #333;
+  min-height: 200px;
+  margin: 400px auto;
+  padding: 20px;
+}
+
+.modal-header {
+  padding: 10px 15px;
+  text-align: right;
+}
+
+.modal-header button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: red;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.open-modal {
+  padding: 5px 10px;
+  background-color: #03963c;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
